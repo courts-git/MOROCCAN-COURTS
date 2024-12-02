@@ -1,0 +1,82 @@
+// Variables
+$primary-color: #C1272D;  // Moroccan Red
+$secondary-color: #8a161a; // Darker Moroccan Red for gradient
+$emreld-green: #007A33; // Emreld Green
+$text-color: #efefef;      // Charcoal Gray
+$title-color: #eeeeee;      // Charcoal Gray
+$highlight-color: #F9A602; // Golden Yellow
+
+
+.teams-container {
+  text-align: center;
+  padding-top: 10pc;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 4px;
+      background-color: $highlight-color;
+      margin: 10px auto 0;
+    }
+  }
+
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .team-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background: #E5E5E5;
+    border-radius: 15px;
+    overflow: hidden;
+    color: $secondary-color;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    h3 {
+      font-size: 1.2rem;
+      z-index: 2;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background-color: $emreld-green;
+
+      &::before {
+        transform: scaleX(1);
+      }
+
+      h3 {
+        color: $text-color;
+      }
+    }
+  }
+}

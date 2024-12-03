@@ -38,8 +38,9 @@ $highlight-color: #F9A602; // Golden Yellow
   width: 100%;
   overflow: hidden;
   height: 80%;
-  background-image: url('/bg.png');
+  //background-image: url('/bg.png');
   //background-image: linear-gradient(to bottom, $highlight-color, $secondary-color);
+  background: #F9A602;
 }
 
 .bgTop {
@@ -125,7 +126,7 @@ $highlight-color: #F9A602; // Golden Yellow
       bottom: 0;
       left: 0;
       inset: 0 0 0 0;
-      background: #F9A602;
+      background: $emreld-green;
       z-index: -1;
       transform: scaleX(0);
       transform-origin: bottom right;

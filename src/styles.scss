@@ -1,0 +1,37 @@
+/* Define Font Families */
+$font-header: 'Qahiri', sans-serif;
+$font-body: 'Montserrat', sans-serif;
+
+/* Global Styles */
+body {
+  font-family: $font-body;
+  color: #333333; /* Charcoal Gray for text */
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA; /* Off-White background */
+}
+
+/* Headers */
+h1, h2, h3 {
+  font-family: $font-header;
+  color: #C1272D; /* Moroccan Red for titles */
+  margin: 0;
+  text-transform: uppercase; /* Optional for style */
+}
+
+/* Body Text */
+h4, h5, h6, p, span, li, a {
+  font-family: $font-body;
+  font-weight: Bolder; /* Regular weight for readability */
+  color: inherit;
+}
+
+/* Highlight for Badges */
+.badge {
+  font-family: $font-body;
+  font-weight: 700; /* Bold weight for emphasis */
+  background-color: #F9A602; /* Golden Yellow highlights */
+  color: #FAFAFA; /* White text on badges */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}

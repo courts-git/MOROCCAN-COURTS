@@ -12,7 +12,7 @@ $highlight-color: #F9A602; // Golden Yellow
   padding-top: 10pc;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 7dvw;
     color: $primary-color;
     margin-bottom: 20px;
     position: relative;
@@ -47,7 +47,8 @@ $highlight-color: #F9A602; // Golden Yellow
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 
-    h3 {
+    h4 {
+      font-weight: normal;
       font-size: 1.2rem;
       z-index: 2;
     }
@@ -74,7 +75,7 @@ $highlight-color: #F9A602; // Golden Yellow
         transform: scaleX(1);
       }
 
-      h3 {
+      h4 {
         color: $text-color;
       }
     }

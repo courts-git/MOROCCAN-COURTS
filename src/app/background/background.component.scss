@@ -92,19 +92,13 @@ $highlight-color: #F9A602; // Golden Yellow
   
 
   p.app-slogan {
-    font-size: 1.5rem;
+    font-size: 140%;
     color: $text-color;
-    margin-top: -2.5%;
   }
 
-  h1 {
+  p.app-slogan {
     position: relative;
-    font-size: 3rem;
-    font-weight: bold;
-    color: $title-color; // Charcoal Gray
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    overflow: hidden;
+    color: $title-color;
   
     &::before {
       content: " ";
@@ -140,7 +134,6 @@ $highlight-color: #F9A602; // Golden Yellow
     box-sizing: border-box;
     display: grid;
     place-content: center;
-    font-family: system-ui, sans-serif;
   }
   
   @media (orientation: landscape) {

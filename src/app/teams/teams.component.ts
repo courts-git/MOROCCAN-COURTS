@@ -7,22 +7,30 @@ import { Component } from '@angular/core';
   styleUrl: './teams.component.scss'
 })
 export class TeamsComponent {
-  teams: string[] = [
-    'AS FAR',
-    'Wydad Athletic Club',
-    'Ittihad Tanger',
-    'Maghreb Fès',
-    'FUS Rabat',
-    'KAC Kénitra',
-    'Raja de Casablanca',
-    'Chabab Rif Al Hoceima',
-    'Olympique Khouribga',
-    'Tihad Athletic Sportif',
-    'Mouloudia Oujda',
-    'AS Salé',
-    'Kawkab Marrakech',
-    'Renaissance Berkane',
-    'COD Meknès',
-    'Raja Al Hoceima'
+  teams = [
+    { name: 'FUS Rabat', logo: '/fusrab.png' },
+    { name: 'IRT Tanger', logo: '/irttan.gif' },
+    { name: 'AS Sale', logo: '/assale.png' },
+    { name: 'MAS Fez', logo: '/masfes.gif' },
+    { name: 'WAC', logo: '/waccas.gif' },
+    { name: 'FAR Rabat', logo: '/frabat.gif' },
+    { name: 'Larache', logo: '/csllar.png' },
+    { name: 'KACM', logo: '/kacm.png' },
+    { name: 'AS Essaouira', logo: '/ase.png' },
+    { name: 'ASCEBB', logo: '/ascebb.png' },
+    { name: 'MTB', logo: '/mtange.png' },
+    { name: 'CPAM', logo: '/cpam.png' },
+    { name: 'FUS Rabat', logo: '/fusrab.png' },
+    { name: 'IRT Tanger', logo: '/irttan.gif' },
+    { name: 'AS Sale', logo: '/assale.png' },
+    { name: 'MAS Fez', logo: '/masfes.gif' },
+    { name: 'WAC', logo: '/waccas.gif' },
+    { name: 'FAR Rabat', logo: '/frabat.gif' },
+    { name: 'Larache', logo: '/csllar.png' },
+    { name: 'KACM', logo: '/kacm.png' },
+    { name: 'AS Essaouira', logo: '/ase.png' },
+    { name: 'ASCEBB', logo: '/ascebb.png' },
+    { name: 'MTB', logo: '/mtange.png' },
+    { name: 'CPAM', logo: '/cpam.png' },
   ];
 }

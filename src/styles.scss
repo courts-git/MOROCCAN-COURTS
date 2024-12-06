@@ -1,6 +1,7 @@
 /* Define Font Families */
 $font-header: 'Qahiri', sans-serif;
 $font-body: 'Montserrat', sans-serif;
+$font-span: 'Jazeel';
 
 /* Global Styles */
 body {
@@ -8,7 +9,6 @@ body {
   color: #333333; /* Charcoal Gray for text */
   margin: 0;
   padding: 0;
-  background-color: #FAFAFA; /* Off-White background */
 }
 
 /* Headers */
@@ -20,10 +20,14 @@ h1, h2, h3 {
 }
 
 /* Body Text */
-h4, h5, h6, p, span, li, a {
+h4, h5, h6, p, li, a {
   font-family: $font-body;
   font-weight: Bolder; /* Regular weight for readability */
   color: inherit;
+}
+
+span{
+  font-family: $font-span;
 }
 
 /* Highlight for Badges */

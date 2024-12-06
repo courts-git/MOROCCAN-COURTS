@@ -1,83 +1,79 @@
 // Variables
 $primary-color: #C1272D;  // Moroccan Red
 $secondary-color: #8a161a; // Darker Moroccan Red for gradient
-$emreld-green: #007A33; // Emreld Green
+$emreld-green: #007A33;
 $text-color: #efefef;      // Charcoal Gray
 $title-color: #eeeeee;      // Charcoal Gray
 $highlight-color: #F9A602; // Golden Yellow
 
+.slider {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  width: 50vw;
+  margin: auto;
+  margin-bottom: 20vh;
 
-.teams-container {
-  text-align: center;
-  padding-top: 10pc;
-
-  h2 {
-    font-size: 7dvw;
-    color: $primary-color;
-    margin-bottom: 20px;
-    position: relative;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 50%;
-      height: 4px;
-      background-color: $highlight-color;
-      margin: 10px auto 0;
-    }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10vw;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
-  .teams-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+  &::before {
+    left: 0;
+    top: 0;
   }
 
-  .team-card {
-    position: relative;
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .slide-track {
     display: flex;
+    animation: scroll 30s linear infinite;
+    width: calc(250px * 24); /* Adjust based on the total number of slides */
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 150px;
-    background: #E5E5E5;
-    border-radius: 15px;
-    overflow: hidden;
-    color: $secondary-color;
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 150px;
+    width: 250px;
 
-    h4 {
-      font-weight: normal;
-      font-size: 1.2rem;
-      z-index: 2;
+    img {
+      height: 80px;
+      width: auto;
+      margin-bottom: 10px;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-      z-index: 1;
-    }
+    
+  }
+}
+h4.teams {
+  font-family: 'Qahiri' ,sans-serif;
+  font-size: 6vh;
+  color: $primary-color;
+}
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      background-color: $emreld-green;
-
-      &::before {
-        transform: scaleX(1);
-      }
-
-      h4 {
-        color: $text-color;
-      }
-    }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 12)); /* Adjust based on total slides */
   }
 }

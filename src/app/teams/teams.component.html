@@ -1,12 +1,11 @@
-<div class="teams-container">
-    <h2>Moroccan Basketball Teams</h2>
-    <div class="teams-grid">
-        @for (team of teams; track team) {
-            <div class="team-card">
-                <h4>{{ team }}</h4>
+<h4 class="teams">National Teams</h4>
+<div class="slider"> 
+    <div class="slide-track">
+            @for (team of teams; track team.name) {
+            <div class="slide">
+                <img [src]="team.logo" [alt]="team.name + ' logo'" class="team-logo" />
+                <p class="team-name">{{ team.name }}</p>
             </div>
         }
     </div>
-  </div>
-
-  
+<div>

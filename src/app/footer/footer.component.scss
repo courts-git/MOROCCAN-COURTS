@@ -1,0 +1,37 @@
+// Variables
+$primary-color: #C1272D;  // Moroccan Red
+$secondary-color: #8a161a; // Darker Moroccan Red for gradient
+$emreld-green: #007A33;
+$text-color: #efefef;      // Charcoal Gray
+$title-color: #eeeeee;      // Charcoal Gray
+$highlight-color: #F9A602; // Golden Yellow
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    background-color: $highlight-color;
+    color: $text-color;
+    text-align: center;
+    padding: 25px 0;
+  
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+  
+      .footer-logo {
+        height: 40px;
+        width: auto;
+      }
+  
+      p {
+        font-family: 'Modern Moroccan Fusion', serif;
+        font-size: 14px;
+        margin: 0;
+        letter-spacing: .5px;
+      }
+    }
+  }
+  
